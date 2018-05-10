@@ -1,0 +1,12 @@
+---
+# tasks file for ansible-role-php-fpm/
+- name: install php-fpm
+  apt:
+    name:   php-fpm
+    state:  latest
+
+- name: php-fpm service state
+  service:
+    name:     php7.0-fpm
+    state:    started
+    enabled:  yes
